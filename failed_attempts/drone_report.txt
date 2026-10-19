@@ -1,0 +1,48 @@
+🚁 DRONE OFFLINE ANALYZER REPORT 🚁
+
+Make sure you are connected to the drone's Wi-Fi (FLOW-UFO-...)!
+
+=== TEST TCP 5007 (Command Port) ===
+  -> Sending [Hex 0101 (Heartbeat)]: 0101
+  -> Sending [String 0101]: 30313031
+  -> Sending [E58 Control (Neutral)]: 6680800080000099
+  -> Sending [Cooingdv Control]: cc80800080000033
+  -> Sending [E58 Heartbeat]: 63630100000000
+  -> Sending [Video Start 1]: ef000400
+  -> Sending [Firmware 0xA0]: a000000000000000
+    <- REPLY (36B): a10000000000000000000000000000000000000000000000000000000000000000000000
+    <- ASCII: !...................................
+
+=== TEST TCP 7070 (Video Port (Raw)) ===
+  -> Sending [Hex 0101 (Heartbeat)]: 0101
+    <- (Silence)
+  -> Sending [String 0101]: 30313031
+    <- (Silence)
+  -> Sending [E58 Control (Neutral)]: 6680800080000099
+    <- (Silence)
+  -> Sending [Cooingdv Control]: cc80800080000033
+    <- (Silence)
+  -> Sending [E58 Heartbeat]: 63630100000000
+    <- (Silence)
+  -> Sending [Video Start 1]: ef000400
+    <- (Silence)
+  -> Sending [Firmware 0xA0]: a000000000000000
+    <- (Silence)
+
+=== TEST RTSP ON TCP 7070 ===
+  -> Sending RTSP OPTIONS
+    <- REPLY:
+      RTSP/1.0 200 OK
+      CSeq: 1
+      Public: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE
+      
+      
+  -> Sending RTSP DESCRIBE
+    <- REPLY:
+      RTSP/1.0 404 Not Found
+      CSeq: 2
+      
+      
+
+=== ALL TESTS COMPLETE ===
+Results saved to drone_report.txt. Copy/paste the contents of this file back to me!
