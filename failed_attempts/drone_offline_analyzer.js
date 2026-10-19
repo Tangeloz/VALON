@@ -5,7 +5,7 @@ const fs = require('fs');
 const DRONE = '192.168.1.1';
 const REPORT_FILE = 'drone_report.txt';
 
-let report = "🚁 DRONE OFFLINE ANALYZER REPORT 🚁\n\n";
+let report = " DRONE OFFLINE ANALYZER REPORT \n\n";
 
 function log(msg) {
   console.log(msg);
